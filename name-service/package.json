@@ -1,0 +1,55 @@
+{
+  "name": "nodejs-circuit-breaker-name",
+  "version": "0.0.1",
+  "main": "false",
+  "author": "Red Hat, Inc.",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "tape test/*.js | tap-spec",
+    "lint": "eslint test/*.js index.js",
+    "prepare": "nsp check",
+    "coverage": "istanbul cover tape test/*.js",
+    "dependencyCheck": "szero . --ci",
+    "release": "standard-version",
+    "openshift": "nodeshift --osc.strictSSL=false",
+    "start": "PORT=8080 node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bucharest-gold/nodejs-circuit-breaker.git"
+  },
+  "files": [
+    "package.json",
+    "LICENSE",
+    "app.js",
+    "lib",
+    "bin"
+  ],
+  "bugs": {
+    "url": "https://github.com/bucharest-gold/nodejs-circuit-breaker/issues"
+  },
+  "homepage": "https://github.com/bucharest-gold/nodejs-circuit-breaker",
+  "devDependencies": {
+    "eslint": "~3.8.1",
+    "eslint-config-semistandard": "~7.0.0",
+    "eslint-config-standard": "~6.2.0",
+    "eslint-plugin-promise": "~3.3.0",
+    "eslint-plugin-react": "~6.4.1",
+    "eslint-plugin-standard": "~2.0.1",
+    "istanbul": "~0.4.5",
+    "nodeshift": "^0.8.1",
+    "nsp": "~2.6.2",
+    "standard-version": "^3.0.0",
+    "szero": "^0.7.1",
+    "tap-spec": "~4.1.1",
+    "tape": "~4.6.2"
+  },
+  "description": "",
+  "keywords": [],
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "~2.8.4",
+    "express": "^4.16.0",
+    "express-ws": "~3.0.0"
+  }
+}
